@@ -3,7 +3,7 @@
 {% block content %}
 <div class="container d-flex justify-content-center">
     <article class="d-flex flex-column">
-        <img class="rounded-circle img-thumbnail" style="margin-right: 10px; width: 150px; height: 150px;"
+        <img class="rounded-circle img-thumbnail" style="margin-right: 10px;"
              src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
         <a class="mr-2" href="{{ url_for('users.user_posts', username=post.author.username) }}" style="margin: 0 auto">
             {{ post.author.username }}</a>
