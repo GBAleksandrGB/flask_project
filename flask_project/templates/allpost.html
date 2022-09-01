@@ -5,7 +5,7 @@
     {% for post in posts.items %}
     <div class="d-flex mb-4">
         <article class="d-flex flex-column">
-            <img class="rounded-circle article-img" style="margin-right: 5px;"
+            <img class="rounded-circle img-thumbnail" style="margin-right: 5px;"
                  src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
             <a class="mr-2" href="{{ url_for('users.user_posts', username=post.author.username) }}"
                style="margin: 0 auto"
