@@ -1,10 +1,8 @@
-import os
-from boto.s3.connection import S3Connection
+import boto
 
 
-key_1 = S3Connection(os.environ['SECRET_KEY'])
-key_2 = S3Connection(os.environ['MAIL_PASSWORD'])
-
+key_1 = boto.config.get('SECRET_KEY')
+key_2 = boto.config.get('MAIL_PASSWORD')
 SQLALCHEMY_DATABASE_URI = 'sqlite:///site.db'
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 SECRET_KEY = key_1
