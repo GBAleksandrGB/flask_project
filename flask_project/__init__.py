@@ -1,17 +1,14 @@
-import os
 from flask import Flask
 from flask_login import LoginManager
 from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
 from flask_mail import Mail
-from boto.s3.connection import S3Connection
 
 
 db = SQLAlchemy()
 login_manager = LoginManager()
 bcrypt = Bcrypt()
 mail = Mail()
-s3 = S3Connection(os.environ['MAIL_PASSWORD'], os.environ['SECRET_KEY'])
 
 
 def create_app():
