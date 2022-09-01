@@ -1,8 +1,11 @@
+import os
+
+
 SQLALCHEMY_DATABASE_URI = 'sqlite:///site.db'
 SQLALCHEMY_TRACK_MODIFICATIONS = False
-SECRET_KEY = "5791628bb0b13ce0c676dfde280ba245"
+SECRET_KEY = os.environ.get('SECRET_KEY')
 MAIL_SERVER = 'smtp.googlemail.com'
 MAIL_PORT = 587
 MAIL_USE_TLS = True
-MAIL_USERNAME = "tomilov.alex@gmail.com"
-MAIL_PASSWORD = "***"
+MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
+MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
