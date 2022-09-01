@@ -3,13 +3,13 @@
 {% block content %}
 <div class="container d-flex justify-content-center">
     <article class="d-flex flex-column">
-        <img class="rounded-circle img-thumbnail" style="margin-right: 5px;"
+        <img class="rounded-circle img-thumbnail" style="margin-right: 5px; max-width: 150px;"
              src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
         <a class="mr-2" href="{{ url_for('users.user_posts', username=post.author.username) }}" style="margin: 0 auto">
             {{ post.author.username }}</a>
     </article>
 
-    <div class="card" style="margin-bottom: 20px;">
+    <div class="card w-50" style="margin-bottom: 20px;">
         <div class="card-body">
             <h4 class="card-title">{{ post.title }}</h4>
             <small>Published {{ post.date_posted.strftime('%A, %d %B %Y %I:%M %p') }}</small>
