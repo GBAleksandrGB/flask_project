@@ -1,0 +1,19 @@
+{% extends "layout/layout.html" %}
+
+{% block content %}
+<div class="d-flex flex-column justify-content-center">
+    <div class="d-flex justify-content-center">
+        <h1>WELCOME!</h1>
+    </div>
+    <hr class="w3-border-grey">
+    <br>
+    <div class="d-flex justify-content-center flex-wrap">
+        <img class="img-fluid mb-2" src="{{ url_for('static', filename='img/blog-template.jpg') }}">
+        <p class="d-flex align-items-center text-center w-50">The blog is dedicated to issues and problems in the field of
+            programming in python. Please register to access the blog entries if you have not done so before, or go
+            through the authorization procedure.
+        </p>
+    </div>
+    <br>
+</div>
+{% endblock %}

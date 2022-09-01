@@ -1,0 +1,16 @@
+body {
+ background: #F7F7F7 url(../img/pattern.png) fixed;
+ color: #555;
+}
+
+#main {
+  background-color: white;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 1320px;
+  min-height: 100vh;
+}
+
+#content {
+  max-width: 70%;
+}
